@@ -1,0 +1,4 @@
+name: FireballNoBlockDamage
+version: 1.0
+main: com.example.fireballnoblockdamage.FireballPlugin
+api-version: 1.8
