@@ -9,22 +9,18 @@ import org.bukkit.entity.Fireball;
 
 public class FireballPlugin extends JavaPlugin implements Listener {
 
-        @Override
-            public void onEnable() {
-                        // Register the event listener
-                                Bukkit.getPluginManager().registerEvents(this, this);
-            }
+    @Override
+    public void onEnable() {
+        // Register the event listener
+        Bukkit.getPluginManager().registerEvents(this, this);
+    }
 
-                @EventHandler
-                    public void onEntityExplode(EntityExplodeEvent event) {
-                                // Check if the entity causing the explosion is a fireball
-                                        if (event.getEntity() instanceof Fireball) {
-                                                        // Cancel the explosion to prevent block damage
-                                                                    event.setCancelled(true);
-                                        }
-                    }
-}
-                                        }
-                    }
-            }
+    @EventHandler
+    public void onEntityExplode(EntityExplodeEvent event) {
+        // Check if the entity causing the explosion is a fireball
+        if (event.getEntity() instanceof Fireball) {
+            // Cancel the explosion to prevent block damage
+            event.setCancelled(true);
+        }
+    }
 }
